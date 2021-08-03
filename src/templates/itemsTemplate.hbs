@@ -1,0 +1,49 @@
+{{#each this}}
+<li class="menu__item">
+  <div class="card">
+    <img
+      src="{{image}}"
+      alt="{{name}}"
+      class="card__image"
+    />
+    <div class="card__content">
+      <h2 class="card__name">{{name}}</h2>
+      <p class="card__price">
+        <span class="material-icons"> monetization_on </span>
+        {{price}}
+      </p>
+
+      <p class="card__descr">
+          {{description}}
+      </p>
+      <ul class="tag-list">
+          {{#each ingredients}}
+        <li class="tag-list__item">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <button class="card__button button">
+      <span class="material-icons button__icon"> shopping_cart </span>
+      В корзину
+    </button>
+  </div>
+</li>
+{{/each}}
+
+
+{{!-- {
+        "id": "XWaQXcbk0",
+        "name": "Картофель, запеченный в мундире",
+        "description": "Ароматный, сытный, шипящий домашний картофель, фаршированный сметанно-беконной начинкой, — это очень простой и очень эффектный способ накормить большое количество человек, практически не потратив на готовку ни сил, ни времени. Обычную картошку при желании тут можно заменить на сладкий батат, а в начинку добавить, к примеру, кукурузу или сладкий красный перец.",
+        "image": "https://s1.eda.ru/StaticContent/Photos/140812180013/140820212258/p_O.jpg",
+        "price": 100,
+        "ingredients": [
+            "Картофель",
+            "Чеснок",
+            "Сметана",
+            "Бекон",
+            "Твердый сыр",
+            "Зеленый лук"
+        ]
+    } --}}
